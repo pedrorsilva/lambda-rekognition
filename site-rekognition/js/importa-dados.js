@@ -1,9 +1,9 @@
 
 $.ajax(
-  { url: 'https://s3.amazonaws.com/fa-site-s3/dados.json',
-   dataType: 'json',
-   crossDomain: true,
-   success: function (dados) {
+  { url: 'https://s3.amazonaws.com/frontend-rekognition/dados.json',
+    dataType: 'json',
+    crossDomain: true,
+    success: function (dados) {
       console.log(dados);
       montaTabela(dados);
       }
@@ -12,7 +12,6 @@ $.ajax(
 
   function montaTabela(dados) {
 
-    
     for (var dados of dados) {
       var trTabela = document.createElement("tr");
 
@@ -22,11 +21,11 @@ $.ajax(
       
 
       tdInfoNome.textContent = dados.nome;
-      tdInfoFaceMatch.textContent = dados.faceMatch;
+      tdInfoFaceMatch.textContent = `${dados.faceMatch}%`;
       tdInfoFoto = document.createElement("img");
       tdInfoFoto.height = 100;
       tdInfoFoto.width = 68;
-      tdInfoFoto.src = 'https://s3.amazonaws.com/fa-imagens-reconhecimento/' + dados.nome + '.jpg';
+      tdInfoFoto.src = 'https://s3.amazonaws.com/facial-recognition-s3/' + dados.nome + '.jpg';
      
 
 

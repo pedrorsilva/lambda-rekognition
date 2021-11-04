@@ -1,0 +1,16 @@
+{
+    "Version": "2012-10-17",
+    "Id": "http referer policy example",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::fa-imagens-reconhimento/*",
+            "Condition": {
+            "StringLike": {"aws:Referer":["https://fa-site-s3.s3.amazonaws.com/*"]} 
+            }
+        }
+    ]
+}
