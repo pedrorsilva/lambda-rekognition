@@ -1,5 +1,5 @@
 # Exemplo AWS Lambda + Rekognition | Python Code
-Projeto de exemplo com lambda no AWS e Rekognition.
+Projeto de exemplo para os serviços AWS Lambda e Rekognition.
 
 Como definição do [Lambda](https://aws.amazon.com/pt/lambda/) conforme descrito no site da Amazon: *O AWS Lambda é um serviço de computação sem servidor e orientado a eventos que permite executar código para praticamente qualquer tipo de aplicação ou serviço de backend sem provisionar ou gerenciar servidores. Você pode acionar o Lambda a partir de mais de 200 serviços da AWS e aplicações de software como serviço (SaaS) e pagar apenas pelo que usar.*
 
